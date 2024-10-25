@@ -37,17 +37,21 @@ const Squadra = [
   }
 ]
 
-const dateSquadra = []
+let dateSquadra = {}
+console.log("Nome e falli subiti:", dateSquadra)
 for (let i = 0; i < Squadra.length; i++) {
   const squadre = Squadra[i]
-  squadre.falliSubiti = (Math.floor(Math.random()*500)+1)
-  squadre.puntiFatti = (Math.floor(Math.random()*105)+1)
-  console.log (squadre)
-  console.log("Punti fatti:",squadre.puntiFatti)
-  console.log("Falli subiti:",squadre.falliSubiti)
-
-  dateSquadra.push(squadre.nome)
-  dateSquadra.push(squadre.falliSubiti)
-  console.log("Nome e falli subiti:",dateSquadra)
+  squadre.falliSubiti = (Math.floor(Math.random() * 500) + 1)
+  squadre.puntiFatti = (Math.floor(Math.random() * 105) + 1)
+  console.log(squadre)
+  console.log("Punti fatti:", squadre.puntiFatti)
+  console.log("Falli subiti:", squadre.falliSubiti)
+ 
+  // propietà Ogetti
+   dateSquadra.nome = squadre.nome
+   dateSquadra.falliSubiti = squadre.falliSubiti
+  console.log("Nome e falli subiti:", dateSquadra)
 
 }
+
+

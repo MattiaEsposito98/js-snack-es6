@@ -1,26 +1,38 @@
-console.log ("Bici più pesante")
+const bikes = [
+  {
+    'nome': "Bici rossa",
+    'peso': 5
+  },
 
-const bike1 = {
-  "nome": "Bici Rossa",
-  "peso": 30
-}
+  {
+    'nome': "Bici blu",
+    'peso': 1
+  },
 
-console.log (bike1.nome,",Peso:", bike1.peso)
+  {
+    'nome': "Bici verde",
+    'peso': 3
+  },
+]
 
-const bike2 = {
-  "nome": "Bici blu",
-  "peso": 20
-}
+//console.log(bikes[0].peso * 2)   //esempio
 
- console.log (bike2.nome,",Peso: ", bike2.peso)
+//peso di riferimento 
+//ciclo per scorrere tutti gli elementi dell'array
+//consizione che verifichi se il peso è da aggiornare - confronto rifermiento con peso elemento i
 
+let biciLeggera = bikes[0]
 
- if (bike1.peso > bike2.peso) {
-   console.log ( "La", bike1.nome, "è più pesante della", bike2.nome)
+for (let i = 0; i < bikes.length; i++) {
+  const elementoCorrente = bikes[i]
+ if (elementoCorrente.peso < biciLeggera.peso){
+  // console.log ("Bici leggera:", biciLeggera)
+  // console.log ("Bici più leggera:", elementoCorrente)
+  biciLeggera = elementoCorrente
+  //console.log ({biciLeggera}, elementoCorrente)
+
  }
 
- else {
-  console.log (`La ${bike2.nome} 2 è più pesante della ${bike1.nome}`)
- }
-   
- 
+}
+
+console.log (biciLeggera)
