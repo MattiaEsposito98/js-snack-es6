@@ -1,7 +1,7 @@
 const bikes = [
   {
     'nome': "Bici rossa",
-    'peso': 5
+    'peso': 5,
   },
 
   {

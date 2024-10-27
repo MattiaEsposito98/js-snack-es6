@@ -37,7 +37,7 @@ const Squadra = [
   }
 ]
 
-let dateSquadra = {}
+let dateSquadra = [{}]
 console.log("Nome e falli subiti:", dateSquadra)
 for (let i = 0; i < Squadra.length; i++) {
   const squadre = Squadra[i]
